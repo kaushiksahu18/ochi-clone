@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { IoIosArrowRoundUp } from "react-icons/io";
 
 function AboutusApproach() {
+  const [isHovering, setIsHovering] = useState(false);
+
   return (
     <div className="w-full text-zinc-900 bg-[#CDEA68] rounded-xl">
       <div className="pb-[4.2vw] pt-[9vw] px-12">
@@ -14,28 +17,40 @@ function AboutusApproach() {
       <div className="flex gap-12 md:flex-row flex-col items-start justify-around py-[2vw] px-12">
         <div className="flex flex-col items-start gap-8">
           <h2 className="text-5xl">Our approach:</h2>
-          <button className="border-2 bg-zinc-700 text-white hover:bg-zinc-900 px-4 py-2 w-[170px] rounded-full border-zinc-700 relative flex items-center">
+          <button
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+            className="bg-zinc-700 text-white hover:bg-zinc-900 transition-[all] duration-[0.5] ease-[cubic-bezier(0.85, 0, 0.15, 1)] px-4 py-2 w-[210px] rounded-full relative"
+          >
             <div className="inline-block">
               <div className="uppercase flex justify-between items-center gap-1 text-xl">
                 <p>read</p>
                 <p>more</p>
               </div>
             </div>
-            <div className="absolute top-1/2 right-[20px] -translate-y-1/2 tinline-block">
-              <div className="w-2 h-2 hover:scale-[3.5] rounded-full bg-white flex justify-center items-center">
-                <IoIosArrowRoundUp
-                  className="rotate-45 bg-transparent p-1 rounded-full"
-                  style={{ width: "2em", height: "2em" }}
-                />
+            <div className="absolute top-1/2 right-[20px] -translate-y-1/2 tinline-block transition-[all] duration-[0.5] ease-[cubic-bezier(0.85, 0, 0.15, 1)]">
+              <div
+                className={`w-2 h-2 ${
+                  isHovering && "scale-[3.5]"
+                } rounded-full bg-white flex justify-center items-center transition-[all] duration-[0.5] ease-[cubic-bezier(0.85, 0, 0.15, 1)]`}
+              >
+                {isHovering && <IoIosArrowRoundUp style={{width:"100%",height:"100%", color:"black", transform:"rotate(45deg)"}}/>}
               </div>
             </div>
           </button>
         </div>
-        <div className="bg-cover rounded-xl bg-center w-[55%] h-[80%] overflow-hidden lg:mb-[150px]">
+        <div className="bg-cover rounded-xl bg-center w-[50dvw] h-[60dvh] overflow-hidden lg:mb-[150px]">
+          <div className={`bg-cover rounded-xl bg-center overflow-hidden w-full h-full transition-[all] duration-[1s] ease-[cubic-bezier(0.85, 0, 0.15, 1)] ${
+              isHovering && "w-[99%] h-[99%]"
+            }`}>
           <img
+            className={`w-full h-full object-cover object-center transition-[all] duration-[1s] ease-[cubic-bezier(0.85, 0, 0.15, 1)] ${
+              isHovering && "scale-[1.1]"
+            }`}
             src="https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-663x469.jpg"
             alt="img"
           />
+          </div>
         </div>
       </div>
     </div>
