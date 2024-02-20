@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <div className="z-[999] w-full h-[5vw] px-12 py-5 flex items-center justify-between text-zinc-800 fixed">
+    <div className="z-[999] w-full h-[5vw] px-12 py-5 flex items-center justify-between backdrop-blur-md text-zinc-800 fixed">
       <div>
         <svg
           width="72"

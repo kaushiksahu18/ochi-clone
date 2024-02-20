@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { IoIosArrowRoundUp } from "react-icons/io";
 
 function Hero() {
@@ -9,7 +10,16 @@ function Hero() {
             <>
               {index === 1 ? (
                 <div className="flex items-center">
-                  <div className="bg-[url('https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg')] bg-cover bg-center w-[10vw] h-[5.5vw] mr-2 inline-block rounded-lg"></div>
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: "10vw" }}
+                    transition={{
+                      duration: 0.4,
+                      delay: 0.5,
+                      ease: [0.76, 0, 0.24, 1],
+                    }}
+                    className="bg-[url('https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg')] bg-cover bg-center w-[10vw] h-[5.5vw] mr-2 inline-block rounded-lg"
+                  ></motion.div>
                   <h2
                     key={index}
                     className="inline-block font-['Rubik Mono One'] text-[7vw] leading-[5.8vw] tracking-[-0.6vw] font-[700]"
@@ -56,7 +66,21 @@ function Hero() {
           </button>
         </div>
       </div>
-      <h4 className="absolute left-1/2 -translate-x-1/2 bottom-6 font-[600] font-['Rubik Mono One'] tracking-[-0.07vw] text-md text-zinc-400">Scroll down</h4>
+      <div className="overflow-hidden absolute left-1/2 -translate-x-1/2 bottom-6 font-[600] font-['Rubik Mono One'] tracking-[-0.07vw] text-md text-zinc-400">
+        <motion.h4
+          initial={{ y: "0%" }}
+          animate={{ y: ["-23%", "80%"] }} // Animate from initial position to 80% down
+          transition={{
+            duration: 1,
+            ease: [0.12, 0, 0.39, 0],
+            repeat: Infinity,
+            repeatDelay: 0.8,
+            repeatType: "loop", // Reverse the animation sequence
+          }}
+        >
+          Scroll down
+        </motion.h4>
+      </div>
     </div>
   );
 }

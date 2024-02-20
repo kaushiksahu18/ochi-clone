@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { IoIosArrowRoundUp } from "react-icons/io";
+
+import Button from "./Button";
 
 function FeaturedProjects() {
   const img1 =
@@ -8,10 +9,10 @@ function FeaturedProjects() {
     "https://ochi.design/wp-content/uploads/2022/09/Vise_front2-663x551.jpg";
   const transition = `transition-[all] duration-[0.6s]`;
 
-  const [word,setWord] = useState("");
+  const [word, setWord] = useState("");
 
   return (
-    <div className="w-[100dvw] h-[150dvh] bg-[#f7f7f7bf] pt-[5vw] px-12 mb-[1vw] relative">
+    <div className="w-[100dvw] h-[135dvh] bg-[#f7f7f7bf] pt-[5vw] px-12 mb-[1vw] relative">
       <h2 className="text-5xl font-[400] leading-none tracking-tight text-zinc-700">
         Featured projects
       </h2>
@@ -40,31 +41,14 @@ function FeaturedProjects() {
           );
         })}
         <h3
-          className={`uppercase z-[1] text-[#CDEA68] text-[8vw] font-[700] font-["Rubik Mono One"] absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-[50%]`}
+          className={`uppercase z-[1] text-[#CDEA68] text-[8vw] font-[700] font-["Rubik Mono One"] absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-[50%] pointer-events-none`}
         >
           {word.split("").map((item, index) => {
             return <span key={index}>{item}</span>;
           })}
         </h3>
       </div>
-      <button className="absolute bottom-[5%] left-1/2 -translate-x-1/2 border-2 bg-white hover:text-white hover:bg-zinc-900 px-4 py-2 w-[270px] rounded-full border-zinc-700 flex justify-between items-center">
-        <div className="inline-block">
-          <div className="uppercase flex justify-between items-center gap-1 text-xl">
-            <p>viwe</p>
-            <p>all</p>
-            <p>case</p>
-            <p>stude</p>
-          </div>
-        </div>
-        <div className="inline-block hover:scale-[4.2] relative right-[2%]">
-          <div className="w-2 h-2 hover:scale-[1] rounded-full bg-white flex justify-center items-center">
-            <IoIosArrowRoundUp
-              className="rotate-45 bg-transparent p-1 rounded-full opacity-0 hover:opacity-1"
-              style={{ width: "2em", height: "2em" , color:"black"}}
-            />
-          </div>
-        </div>
-      </button>
+      <Button bgcolor="bg-zinc-800" hbg="hover:bg-zinc-900" color="text-white" data="Viwe all case study" />
     </div>
   );
 }
