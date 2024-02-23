@@ -15,7 +15,7 @@ function Hero() {
                     animate={{ width: "10vw" }}
                     transition={{
                       duration: 0.4,
-                      delay: 1.2,
+                      delay: 1,
                       ease: [0.76, 0, 0.24, 1],
                     }}
                     className="bg-[url('https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg')] bg-cover bg-center w-[10vw] h-[5.5vw] mr-2 inline-block rounded-lg"
