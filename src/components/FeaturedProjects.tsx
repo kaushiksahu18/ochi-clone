@@ -14,12 +14,12 @@ function FeaturedProjects() {
   const [isHoveringforCard, setIsHoveringforcard] = useState(false);
 
   return (
-    <div className="w-[100dvw] h-[135dvh] bg-[#f7f7f7bf] pt-[5vw] px-12 mb-[1vw] relative">
+    <div className="w-[100dvw] h-[85dvh] md:h-[135dvh] bg-[#f7f7f7bf] pt-[5vw] px-8 md:px-12 mb-[1vw] relative">
       <h2 className="text-5xl font-[400] leading-none tracking-tight text-zinc-700">
         Featured projects
       </h2>
       <div className="w-full h-[1px] mb-[3.5vw] mt-[5vw] bg-zinc-500"></div>
-      <div className="w-full h-[80%] relative">
+      <div className=" w-full h-full relative flex flex-col gap-12 md:block">
         {[img1, img2].map((item, index) => {
           return (
             <div
@@ -29,7 +29,7 @@ function FeaturedProjects() {
               )}
               onMouseLeave={() => (setWord(""), setIsHoveringforcard(false))}
               key={index}
-              className={`w-[49%] h-[70%] inline-block absolute ${
+              className={`w-full h-[26%] md:w-[49%] md:h-[70%] block md:inline-block relative md:absolute ${
                 index === 0 ? "left-0" : "right-0"
               }`}
             >
@@ -47,7 +47,7 @@ function FeaturedProjects() {
         })}
         {isHoveringforCard && (
           <h3
-            className={`uppercase z-[1] text-[#CDEA68] text-[8vw] font-[700] font-["Rubik Mono One"] absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-[50%] pointer-events-none`}
+            className={`uppercase z-[1] text-[#CDEA68] text-[8vw] font-[700] font-["Rubik Mono One"] absolute top-[29%] left-1/2 -translate-x-1/2 -translate-y-[50%] pointer-events-none`}
           >
             {word.split("").map((item, index) => {
               return (
@@ -55,7 +55,7 @@ function FeaturedProjects() {
                   initial={{ y: "-100vw" }}
                   animate={{ y: 0 }}
                   transition={{
-                    duration: 1,
+                    duration: 2,
                     ease: [0.65, 0, 0.35, 1],
                     delay: index * 0.1,
                   }}
@@ -71,7 +71,7 @@ function FeaturedProjects() {
       <button
         onMouseEnter={() => setIsHoveringforBTN(true)}
         onMouseLeave={() => setIsHoveringforBTN(false)}
-        className="bg-zinc-700 text-white hover:bg-zinc-900 transition-[all] duration-[0.5] ease-[cubic-bezier(0.85, 0, 0.15, 1)] px-4 py-2 w-[300px] rounded-full absolute bottom-[5vw] left-1/2 -translate-x-1/2"
+        className="bg-zinc-700 text-white hover:bg-zinc-900 transition-[all] duration-[0.5] ease-[cubic-bezier(0.85, 0, 0.15, 1)] px-4 py-2 w-[300px] rounded-full absolute bottom-[15vw] md:bottom-[5vw] left-1/2 -translate-x-1/2"
       >
         <div className="inline-block">
           <div className="uppercase flex justify-between items-center gap-1 text-xl">

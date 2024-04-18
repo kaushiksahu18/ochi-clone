@@ -39,7 +39,7 @@ function AboutusApproach() {
             </div>
           </button>
         </div>
-        <div className="bg-cover rounded-xl bg-center w-[50dvw] h-[60dvh] overflow-hidden lg:mb-[150px]">
+        <div className="bg-cover rounded-xl bg-center w-full md:w-[50dvw] h-[30dvh] md:h-[60dvh] overflow-hidden mb-[20px] lg:mb-[150px]">
           <div className={`bg-cover rounded-xl bg-center overflow-hidden w-full h-full transition-[all] duration-[1s] ease-[cubic-bezier(0.85, 0, 0.15, 1)] ${
               isHovering && "w-[99%] h-[99%]"
             }`}>

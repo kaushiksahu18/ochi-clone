@@ -3,7 +3,7 @@ import Logoforfooter from "../assets/Logoforfooter";
 
 function ContectUs() {
   return (
-    <div className="w-full h-full border rounded-lg py-[5vw] relative flex">
+    <div className="w-[100%] pt-[25%] md:mt-0 h-full border rounded-lg py-[5vw] relative flex">
       <div className="w-1/2 inline-block px-12 relative">
         <h2 className="text-[6vw] font-[600] leading-[0.8] tracking-[-0.5vw]">
           EYE-{" "}

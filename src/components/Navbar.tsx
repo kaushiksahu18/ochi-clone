@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <div className="z-[999] w-full h-[5vw] px-12 py-5 flex items-center justify-between backdrop-blur-md text-zinc-800 fixed">
+    <div className="z-[999] w-full h-[5vw] px-12 py-8 md:py-5 flex items-center justify-between backdrop-blur-md text-zinc-800 fixed">
       <div>
         <svg
           width="72"
@@ -31,7 +31,7 @@ function Navbar() {
           ></path>
         </svg>
       </div>
-      <div className="flex items-center justify-between gap-6">
+      <div className="hidden md:flex items-center justify-between gap-6">
         {["Services", "Our work", "About us", "Insights", "Contact us"].map(
           (item, index) => {
             return (
@@ -47,6 +47,7 @@ function Navbar() {
           }
         )}
       </div>
+      <div className="md:hidden flex"><a href="/">About</a></div>
     </div>
   );
 }

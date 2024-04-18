@@ -4,15 +4,15 @@
   channel = "stable-23.11"; # "stable-23.11" or "unstable"
   # Use https://search.nixos.org/packages to  find packages
   packages = [
-    # pkgs.python3
-    # pkgs.go
-    pkgs.nodejs
-    pkgs.zsh
+    pkgs.bun
     pkgs.fish
+    pkgs.neovim
     pkgs.starship
-    pkgs.nerdfonts
+    pkgs.bat
+    pkgs.zoxide
+    pkgs.unzip
     pkgs.fira-code
-    pkgs.fira-code-nerdfont
+    pkgs.meslo-lgs-nf
   ];
 
   # Sets environment variables in the workspace
@@ -27,7 +27,7 @@
     previews = [
       {
         # command = [ "npm" "run" "dev" "--" "--port" "$PORT" "--hostname" "0.0.0.0" ];
-        command = ["npm" "run" "dev" "--" "--port" "$PORT" "--host" "0.0.0.0"];
+        command = ["bun" "dev" "--" "--port" "$PORT" "--host" "0.0.0.0"];
         manager = "web";
         id = "web";
       }
