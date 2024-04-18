@@ -18,7 +18,7 @@ function Hero() {
                       delay: 1,
                       ease: [0.76, 0, 0.24, 1],
                     }}
-                    className="bg-[url('https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg')] bg-cover bg-center w-[14vw] h-[7.5vw] mr-2 inline-block rounded-lg"
+                    className="bg-[url('https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg')] bg-cover bg-center w-[13vw] md:w-[10vw] h-[6.6vw] md:h-[5.5vw] mr-2 inline-block rounded-lg"
                   ></motion.div>
                   <h2
                     key={index}
@@ -59,7 +59,7 @@ function Hero() {
             start the project
           </button>
           <IoIosArrowRoundUp
-            className="rotate-45 border peer-hover:bg-zinc-900 peer-hover:text-white border-zinc-900 bg-transparent p-1 rounded-full"
+            className="rotate-45 border peer-hover:bg-zinc-900 transition-all duration-[0.2s] peer-hover:text-white border-zinc-900 bg-transparent p-1 rounded-full"
             style={{ width: "2em", height: "2em" }}
           />
         </div>

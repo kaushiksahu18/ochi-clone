@@ -71,7 +71,7 @@ function FeaturedProjects() {
       <button
         onMouseEnter={() => setIsHoveringforBTN(true)}
         onMouseLeave={() => setIsHoveringforBTN(false)}
-        className="bg-zinc-700 text-white hover:bg-zinc-900 transition-[all] duration-[0.5] ease-[cubic-bezier(0.85, 0, 0.15, 1)] px-4 py-2 w-[300px] rounded-full absolute bottom-[15vw] md:bottom-[5vw] left-1/2 -translate-x-1/2"
+        className="z-[99] bg-zinc-700 text-white hover:bg-zinc-900 transition-[all] duration-[0.5] ease-[cubic-bezier(0.85, 0, 0.15, 1)] px-4 py-2 w-[300px] rounded-full absolute bottom-[15vw] md:bottom-[5vw] left-1/2 -translate-x-1/2"
       >
         <div className="inline-block">
           <div className="uppercase flex justify-between items-center gap-1 text-xl">
